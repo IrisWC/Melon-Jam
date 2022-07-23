@@ -30,7 +30,7 @@ public class Player {
 	public void act(Platform[] platforms) {
 		xvel *= 0.95;
 		
-		if(yvel < 15)
+		if(yvel < 10)
 			yvel += 0.5;
 		
 		onSurface = false;
@@ -55,7 +55,7 @@ public class Player {
 	
 	public void jump() {
 		if(onSurface) {
-			yvel = -10;
+			yvel = -15;
 			moveBy(0, (int)yvel);
 		}
 	}

@@ -23,7 +23,7 @@ public class Game extends JPanel implements KeyListener{
 		super();
 		dimensions = new Dimension[] {new Dimension(1), new Dimension(2), new Dimension(3), new Dimension(4),
 				new Dimension(5), new Dimension(6), new Dimension(7), new Dimension(8)};
-		player = new Player(200, 650, 150, 150);
+		player = new Player(175, 650, 150, 150);
 		inDimensions = true;
 	}
 
@@ -38,8 +38,14 @@ public class Game extends JPanel implements KeyListener{
 	  	  	}
 	  	  	
 	  		player.act(dimensions[0].getPlatforms());
-
+	  		
 	  		repaint();
+	  		
+	  		try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
