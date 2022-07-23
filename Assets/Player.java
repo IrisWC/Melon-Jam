@@ -1,4 +1,4 @@
-package Assests;
+package Assets;
 
 public class Player {
 
