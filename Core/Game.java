@@ -35,6 +35,8 @@ public class Game extends JPanel implements KeyListener{
 	    g2.scale(ratioX,ratioY);
 	    
 	    g.drawImage(new ImageIcon("img\\Red Orb.png").getImage(), 0, 0, 250, 250, this);
+	    
+	    g2.setTransform(at);
 	}
 
 	public void keyPressed(KeyEvent e) {
