@@ -15,7 +15,7 @@ public class Player {
 	private Rectangle hitbox;
 	
 	public Player(int xcord, int ycord, int w, int h) {
-		image = new ImageIcon("img\\Player.png").getImage();
+		image = new ImageIcon("img\\Witch.png").getImage();
 		x = xcord;
 		y = ycord;
 		width = w;
@@ -27,7 +27,7 @@ public class Player {
 		onSurface = false;
 	}
 	
-	public void fall() {
+	public void act(Platform[] platforms) {
 		xvel *= 0.95;
 		
 		if(yvel < 15)
@@ -35,7 +35,20 @@ public class Player {
 		
 		onSurface = false;
 		
-		//TODO Add in something to check if player is on a platform
+		for(Platform p : platforms) {
+			boolean temp = true;
+			Rectangle pHitbox = p.getHitbox();
+			
+			if ((y + height) < (pHitbox.getY() - 5) || (pHitbox.getY() < (y + height))) 
+				temp = false;
+			else if ((x + width < pHitbox.getX()) ||(pHitbox.getX() + pHitbox.getWidth() < x))
+				temp = false;
+			
+			if(temp) {
+				onSurface = true;
+				yvel = 0;
+			}
+		}
 		
 		moveBy((int)xvel, (int)yvel);
 	}

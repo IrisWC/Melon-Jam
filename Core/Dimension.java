@@ -17,9 +17,9 @@ public class Dimension {
 		case 1: //Red
 			background = new ImageIcon("img\\Red.png").getImage();
 			orb = new ImageIcon("img\\Red Orb.png").getImage();
-			orbx = 800;
-			orby = 400;
-			
+			orbx = 1300;
+			orby = 200;
+			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true)};
 			break;
 		case 2:
 			break;
@@ -40,9 +40,13 @@ public class Dimension {
 	
 	public void draw(Graphics g, ImageObserver obs) {
 		g.drawImage(background, 0, 0, 1600, 900, obs);
-//		for(Platform p : platforms) {
-//			p.draw(g, obs);
-//		}
+		for(Platform p : platforms) {
+			p.draw(g, obs);
+		}
 		g.drawImage(orb, orbx, orby, 50, 50, obs);
+	}
+	
+	public Platform[] getPlatforms() {
+		return platforms;
 	}
 }
