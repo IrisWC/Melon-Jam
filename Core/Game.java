@@ -13,6 +13,8 @@ public class Game extends JPanel implements KeyListener{
 	public static final int WIDTH = 1600;
 	public static final int HEIGHT = 900;
 	
+	private Player player;
+	
 	public Game() {
 		super();
 	}
@@ -34,6 +36,7 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
+	    g.drawImage(new ImageIcon("img\\Red.png").getImage(), 0, 0, 1600, 900, this);
 	    g.drawImage(new ImageIcon("img\\Red Orb.png").getImage(), 0, 0, 250, 250, this);
 	    
 	    g2.setTransform(at);
