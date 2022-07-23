@@ -40,7 +40,7 @@ public class Player {
 			boolean temp = true;
 			Rectangle pHitbox = p.getHitbox();
 			
-			if ((y + height) < (pHitbox.getY() - 5) || (pHitbox.getY() < (y + height))) 
+			if ((y + height) < (pHitbox.getY() - 5) || (pHitbox.getY() < (y + height))) //TODO Debug falling through platforms
 				temp = false;
 			else if ((x + width < pHitbox.getX()) ||(pHitbox.getX() + pHitbox.getWidth() < x))
 				temp = false;

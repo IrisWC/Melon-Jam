@@ -39,21 +39,23 @@ public class Dimension {
 			background = new ImageIcon("img\\Green.png").getImage();
 			orb = new ImageIcon("img\\Green Orb.png").getImage();
 			orbx = 1300;
-			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
-			spawny = 650;
+			orby = 100;
+			platforms = new Platform[] {new Platform(1175, 200, 300, 50, true), new Platform(100, 450, 200, 50, true),
+					new Platform(400, 600, 200, 50, true), new Platform(700, 400, 200, 50, true), new Platform(900, 300, 200, 50, true),
+					new Platform(650, 800, 200, 50, true), new Platform(1100, 800, 200, 50, true)};
+			spawnx = 155;
+			spawny = 300;
 			break;
 		case 4: //Blue
 			background = new ImageIcon("img\\Blue.png").getImage();
 			orb = new ImageIcon("img\\Blue Orb.png").getImage();
-			orbx = 1300;
-			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
-			spawny = 650;
+			orbx = 1375;
+			orby = 150;
+			platforms = new Platform[] {new Platform(1250, 250, 300, 50, true), new Platform(100, 300, 300, 50, true),
+					new Platform(500, 400, 200, 50, true), new Platform(850, 400, 200, 50, true), new Platform(1300, 600, 200, 50, true),
+					new Platform(100, 800, 200, 50, true), new Platform(550, 800, 200, 50, true), new Platform(850, 700, 200, 50, true)};
+			spawnx = 205;
+			spawny = 150;
 			break;
 		case 5: //Purple
 			background = new ImageIcon("img\\Purple.png").getImage();
