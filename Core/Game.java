@@ -14,9 +14,12 @@ public class Game extends JPanel implements KeyListener{
 	public static final int HEIGHT = 900;
 	
 	private Player player;
+	private Dimension[] dimensions;
 	
 	public Game() {
 		super();
+		dimensions = new Dimension[] {new Dimension(1), new Dimension(2), new Dimension(3), new Dimension(4),
+				new Dimension(5), new Dimension(6), new Dimension(7), new Dimension(8)};
 	}
 
 	public void run() {
@@ -36,8 +39,7 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
-	    g.drawImage(new ImageIcon("img\\Red.png").getImage(), 0, 0, 1600, 900, this);
-	    g.drawImage(new ImageIcon("img\\Red Orb.png").getImage(), 800, 400, 50, 50, this);
+	    dimensions[0].draw(g, this);
 	    
 	    g2.setTransform(at);
 	}
