@@ -79,6 +79,12 @@ public class Game extends JPanel implements KeyListener{
 	    
 	    if(inDimensions)
 	    	dimensions[currentDimension].draw(g, this);
+	    
+	    if(player.checkRespawn()) {
+	    	player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
+  			player.stop();
+	    }
+	    
 	    player.draw(g, this);
 	    
 	    g2.setTransform(at);

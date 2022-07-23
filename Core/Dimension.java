@@ -22,17 +22,17 @@ public class Dimension {
 			orby = 200;
 			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
+			spawnx = 205;
 			spawny = 650;
 			break;
 		case 2: // Orange
 			background = new ImageIcon("img\\Orange.png").getImage();
 			orb = new ImageIcon("img\\Orange Orb.png").getImage();
-			orbx = 1300;
-			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
+			orbx = 225;
+			orby = 100;
+			platforms = new Platform[] {new Platform(100, 800, 300, 50, true), new Platform(100, 200, 300, 50, true), new Platform(1200, 400, 300, 50, true),
+					new Platform(567, 667, 200, 50, true), new Platform(883, 533, 200, 50, true), new Platform(567, 350, 200, 50, true)};
+			spawnx = 205;
 			spawny = 650;
 			break;
 		case 3: //Green

@@ -83,6 +83,12 @@ public class Player {
 		yvel = 0;
 	}
 	
+	public boolean checkRespawn() {
+		if(y > 900)
+			return true;
+		return false;
+	}
+	
 	public void faceRight() {
 		image = new ImageIcon("img\\Witch Right.png").getImage();
 	}
