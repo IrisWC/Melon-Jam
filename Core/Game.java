@@ -44,6 +44,7 @@ public class Game extends JPanel implements KeyListener{
 	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
 	  		if(gotOrb && currentDimension != 7) {
 	  			currentDimension++;
+	  			player.moveTo(175,  650);
 	  		}
 	  		
 	  		repaint();
@@ -69,7 +70,7 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
-	    dimensions[0].draw(g, this);
+	    dimensions[currentDimension].draw(g, this);
 	    player.draw(g, this);
 	    
 	    g2.setTransform(at);
