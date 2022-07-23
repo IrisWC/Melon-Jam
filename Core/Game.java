@@ -41,13 +41,6 @@ public class Game extends JPanel implements KeyListener{
 	  	  	
 	  		player.act(dimensions[currentDimension].getPlatforms());
 	  		
-	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
-	  		if(gotOrb && currentDimension != 7) {
-	  			currentDimension++;
-	  			player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
-	  			player.stop();
-	  		}
-	  		
 	  		repaint();
 	  		
 	  		try {
@@ -86,6 +79,13 @@ public class Game extends JPanel implements KeyListener{
 	  		player.faceRight();
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = true;
+	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
+	  		if(gotOrb && currentDimension != 7) {
+	  			currentDimension++;
+	  			player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
+	  			player.stop();
+	  		}
 	  	}
 	  }
 	    
@@ -96,7 +96,7 @@ public class Game extends JPanel implements KeyListener{
 	  		rightPressed = false;
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = false;
-	  	}
+	  	} 
 	  }
 
 	public void keyTyped(KeyEvent e) {
