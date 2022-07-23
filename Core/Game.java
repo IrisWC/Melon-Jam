@@ -15,7 +15,7 @@ public class Game extends JPanel implements KeyListener{
 	
 	private Player player;
 	private Dimension[] dimensions;
-	private int currentDimension;
+	private int currentDimension, currentText;
 	
 	private boolean atStart, inDimensions, atEnd;
 	private boolean leftPressed, rightPressed, upPressed;
@@ -77,15 +77,18 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
-	    if(inDimensions)
+	    if(inDimensions)  {
 	    	dimensions[currentDimension].draw(g, this);
+	    	player.draw(g, this);
+	    }
 	    
 	    if(player.checkRespawn()) {
 	    	player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
   			player.stop();
 	    }
 	    
-	    player.draw(g, this);
+	    if(atEnd)
+	    	g.drawImage(new ImageIcon("img\\Home.png").getImage(), 0, 0, 1600, 900, this);
 	    
 	    g2.setTransform(at);
 	}
