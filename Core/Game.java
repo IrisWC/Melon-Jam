@@ -77,7 +77,8 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
-	    dimensions[currentDimension].draw(g, this);
+	    if(inDimensions)
+	    	dimensions[currentDimension].draw(g, this);
 	    player.draw(g, this);
 	    
 	    g2.setTransform(at);
