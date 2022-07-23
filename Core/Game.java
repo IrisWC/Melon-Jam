@@ -44,7 +44,8 @@ public class Game extends JPanel implements KeyListener{
 	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
 	  		if(gotOrb && currentDimension != 7) {
 	  			currentDimension++;
-	  			player.moveTo(175,  650);
+	  			player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
+	  			player.stop();
 	  		}
 	  		
 	  		repaint();

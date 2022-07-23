@@ -77,6 +77,11 @@ public class Player {
 		hitbox = new Rectangle(x, y, width, height);
 	}
 	
+	public void stop() {
+		xvel = 0;
+		yvel = 0;
+	}
+	
 	public boolean checkForOrb(Rectangle orbHitbox) {
 		if(hitbox.intersects(orbHitbox))
 			return true;

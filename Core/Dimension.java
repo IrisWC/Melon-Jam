@@ -11,6 +11,7 @@ public class Dimension {
 	private Platform[] platforms;
 	private Image orb;
 	private int orbx, orby;
+	private int spawnx, spawny;
 	
 	public Dimension(int type) {
 		switch (type) {
@@ -21,6 +22,8 @@ public class Dimension {
 			orby = 200;
 			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
+			spawnx = 175;
+			spawny = 650;
 			break;
 		case 2:
 			background = new ImageIcon("img\\Orange.png").getImage();
@@ -29,6 +32,8 @@ public class Dimension {
 			orby = 200;
 			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
+			spawnx = 175;
+			spawny = 650;
 			break;
 		case 3:
 			break;
@@ -59,5 +64,13 @@ public class Dimension {
 	
 	public Rectangle getOrbHitbox() {
 		return new Rectangle(orbx, orby, 50, 50);
+	}
+	
+	public int getSpawnX() {
+		return spawnx;
+	}
+	
+	public int getSpawnY() {
+		return spawny;
 	}
 }
