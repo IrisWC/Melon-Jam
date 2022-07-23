@@ -15,6 +15,7 @@ public class Game extends JPanel implements KeyListener{
 	
 	private Player player;
 	private Dimension[] dimensions;
+	private int currentDimension;
 	
 	private boolean atStart, inDimensions, atEnd;
 	private boolean leftPressed, rightPressed, upPressed;
@@ -25,6 +26,7 @@ public class Game extends JPanel implements KeyListener{
 				new Dimension(5), new Dimension(6), new Dimension(7), new Dimension(8)};
 		player = new Player(175, 650, 150, 150);
 		inDimensions = true;
+		currentDimension = 0;
 	}
 
 	public void run() {
@@ -37,7 +39,12 @@ public class Game extends JPanel implements KeyListener{
 	  	  		player.jump();
 	  	  	}
 	  	  	
-	  		player.act(dimensions[0].getPlatforms());
+	  		player.act(dimensions[currentDimension].getPlatforms());
+	  		
+	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
+	  		if(gotOrb && currentDimension != 7) {
+	  			currentDimension++;
+	  		}
 	  		
 	  		repaint();
 	  		

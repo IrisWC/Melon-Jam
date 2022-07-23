@@ -50,4 +50,8 @@ public class Dimension {
 	public Platform[] getPlatforms() {
 		return platforms;
 	}
+	
+	public Rectangle getOrbHitbox() {
+		return new Rectangle(orbx, orby, 50, 50);
+	}
 }

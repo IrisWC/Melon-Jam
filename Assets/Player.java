@@ -71,6 +71,12 @@ public class Player {
 		hitbox = new Rectangle(x, y, width, height);
 	}
 	
+	public boolean checkForOrb(Rectangle orbHitbox) {
+		if(hitbox.intersects(orbHitbox))
+			return true;
+		return false;
+	}
+	
 	public void draw(Graphics g, ImageObserver obs) {
 		g.drawImage(image, x, y, width, height, obs);
 	}
