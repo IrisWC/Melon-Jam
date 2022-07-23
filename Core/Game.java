@@ -80,8 +80,10 @@ public class Game extends JPanel implements KeyListener{
 	public void keyPressed(KeyEvent e) {
 	  	if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			leftPressed = true;
+			player.faceLeft();
 	  	} else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 	  		rightPressed = true;
+	  		player.faceRight();
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = true;
 	  	}

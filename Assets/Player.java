@@ -10,12 +10,12 @@ public class Player {
 	private int x, y, width, height;
 	private Image image;
 	private double xvel, yvel;
-	private boolean onSurface;
+	private boolean onSurface, facingRight;
 	
 	private Rectangle hitbox;
 	
 	public Player(int xcord, int ycord, int w, int h) {
-		image = new ImageIcon("img\\Witch.png").getImage();
+		image = new ImageIcon("img\\Witch Right.png").getImage();
 		x = xcord;
 		y = ycord;
 		width = w;
@@ -25,6 +25,7 @@ public class Player {
 		xvel = 0;
 		yvel = 0;
 		onSurface = false;
+		facingRight = true;
 	}
 	
 	public void act(Platform[] platforms) {
@@ -80,6 +81,14 @@ public class Player {
 	public void stop() {
 		xvel = 0;
 		yvel = 0;
+	}
+	
+	public void faceRight() {
+		image = new ImageIcon("img\\Witch Right.png").getImage();
+	}
+	
+	public void faceLeft() {
+		image = new ImageIcon("img\\Witch Left.png").getImage();
 	}
 	
 	public boolean checkForOrb(Rectangle orbHitbox) {
