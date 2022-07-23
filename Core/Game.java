@@ -16,6 +16,8 @@ public class Game extends JPanel implements KeyListener{
 	private Player player;
 	private Dimension[] dimensions;
 	
+	private boolean atStart, inDimensions, atEnd;
+	
 	public Game() {
 		super();
 		dimensions = new Dimension[] {new Dimension(1), new Dimension(2), new Dimension(3), new Dimension(4),
