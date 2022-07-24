@@ -67,8 +67,9 @@ public class Dimension {
 			orb = new ImageIcon("img\\Purple Orb.png").getImage();
 			orbx = 1300;
 			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
+			platforms = new Platform[] {new Platform(1200, 800, 300, 50, true), new Platform(100, 800, 300, 50, true),
+					new Platform(500, 800, 150, 50, true), new Platform(650, 800, 150, 50, true), new Platform(800, 800, 150, 50, true),
+					new Platform(300, 550, 200, 50, true), new Platform(600, 400, 200, 50, true), new Platform(900, 250, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
 			shroom = new Mushroom(5, 763, 500, 50, 50, true);
