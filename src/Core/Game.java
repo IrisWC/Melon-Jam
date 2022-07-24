@@ -92,6 +92,7 @@ public class Game extends JPanel implements KeyListener{
 	    
 	    if(atStart)  {
 	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
+	    	g.drawImage(new ImageIcon("Witch Right.png").getImage(), 324, 372, 90, 150, this);
 	    	g.drawImage(new ImageIcon("Start " + currentText + ".png").getImage(), 75, 625, 1450, 200, this);
 	    }
 	    
@@ -108,6 +109,7 @@ public class Game extends JPanel implements KeyListener{
 	    
 	    if(atEnd) {
 	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
+	    	g.drawImage(new ImageIcon("Witch Right.png").getImage(), 324, 372, 90, 150, this);
 	    	g.drawImage(new ImageIcon("End " + currentText + ".png").getImage(), 75, 625, 1450, 200, this);
 	    }
 	    
@@ -130,7 +132,7 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			
 	  		if(atStart) {
-	  			if(currentText != 11)
+	  			if(currentText != 12)
 	  				currentText++;
 	  			else {
 	  				inDimensions = true;
