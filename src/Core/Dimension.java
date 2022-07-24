@@ -65,14 +65,14 @@ public class Dimension {
 		case 5: //Purple
 			background = new ImageIcon("img\\Purple.png").getImage();
 			orb = new ImageIcon("img\\Purple Orb.png").getImage();
-			orbx = 1300;
-			orby = 200;
+			orbx = 1325;
+			orby = 700;
 			platforms = new Platform[] {new Platform(1200, 800, 300, 50, true), new Platform(100, 800, 300, 50, true),
 					new Platform(488, 800, 150, 50, true), new Platform(725, 800, 150, 50, true), new Platform(963, 800, 150, 50, true),
-					new Platform(300, 550, 200, 50, true), new Platform(600, 400, 200, 50, true), new Platform(900, 250, 200, 50, true)};
-			spawnx = 175;
+					new Platform(400, 600, 200, 50, true), new Platform(700, 450, 200, 50, true), new Platform(1000, 300, 200, 50, true)};
+			spawnx = 200;
 			spawny = 650;
-			shroom = new Mushroom(5, 763, 500, 50, 50, true);
+			shroom = new Mushroom(5, 1075, 250, 50, 50, true);
 			break;
 		case 6: //Pink
 			background = new ImageIcon("img\\Pink.png").getImage();
