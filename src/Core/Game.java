@@ -30,6 +30,7 @@ public class Game extends JPanel implements KeyListener{
 		atEnd = false;
 		
 		currentDimension = 0;
+		currentText = 0;
 	}
 
 	public void run() {
@@ -87,8 +88,10 @@ public class Game extends JPanel implements KeyListener{
   			player.stop();
 	    }
 	    
-	    if(atEnd)
+	    if(atEnd) {
 	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
+	    	g.drawImage(new ImageIcon("End " + currentText + ".png").getImage(), 75, 625, 1450, 200, this);
+	    }
 	    
 	    g2.setTransform(at);
 	}
@@ -114,15 +117,38 @@ public class Game extends JPanel implements KeyListener{
 				} else if (gotOrb) {
 					inDimensions = false;
 					atEnd = true;
+					currentText = 1;
 				} 
 			}
 			else if (atEnd) {
-				
+				switch(currentText) {
+				case 1:
+					if(player.countShrooms() == 0)
+						currentText = 2;
+					else 
+						currentText = 4;
+					break;
+				case 2:
+					currentText = 3;
+					break;
+				case 3:
+					break;
+				case 4:
+					if(player.countShrooms() == 7)
+						currentText = 5;
+					else if(player.countShrooms() == 8)
+						currentText = 6;
+					else
+						currentText = 7;
+					break;
+				case 5:
+				case 6:
+					currentText = 7;
+					break;
+				case 7:
+					break;
+				}
 			}
-	  	} else if (e.getKeyChar() == 'y' || e.getKeyChar() == 'Y') {
-	  		
-	  	} else if (e.getKeyChar() == 'n' || e.getKeyChar() == 'N') {
-	  		
 	  	}
 	  }
 	    

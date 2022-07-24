@@ -114,6 +114,10 @@ public class Player {
 		}
 	}
 	
+	public int countShrooms() {
+		return bag.size();
+	}
+	
 	public void draw(Graphics g, ImageObserver obs) {
 		g.drawImage(image, x, y, width, height, obs);
 	}
