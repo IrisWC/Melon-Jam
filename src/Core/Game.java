@@ -111,7 +111,11 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = true;
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-			if (inDimensions) {
+			
+	  		if(atStart) {
+	  			currentText++;
+	  		}
+	  		else if (inDimensions) {
 				boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
 				player.checkShroom(dimensions[currentDimension].getShroom());
 				
