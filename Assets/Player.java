@@ -2,6 +2,7 @@ package Assets;
 
 import java.awt.*;
 import java.awt.image.ImageObserver;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -11,6 +12,7 @@ public class Player {
 	private Image image;
 	private double xvel, yvel;
 	private boolean onSurface, facingRight;
+	private ArrayList<Mushroom> bag;
 	
 	private Rectangle hitbox;
 	
@@ -100,6 +102,13 @@ public class Player {
 	public boolean checkForOrb(Rectangle orbHitbox) {
 		if(hitbox.intersects(orbHitbox))
 			return true;
+		return false;
+	}
+	
+	public boolean checkShroom(Mushroom shroom) {
+		if(hitbox.intersects(shroom.getHitbox())) {
+			return true;
+		}
 		return false;
 	}
 	
