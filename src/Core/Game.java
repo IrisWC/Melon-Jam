@@ -17,7 +17,7 @@ public class Game extends JPanel implements KeyListener{
 	private Dimension[] dimensions;
 	private int currentDimension, currentText;
 	
-	private boolean atStart, inDimensions, atEnd, atCredit;
+	private boolean atMenu, atStart, inDimensions, atEnd, atCredit;
 	private boolean leftPressed, rightPressed, upPressed;
 	
 	public Game() {
@@ -26,7 +26,8 @@ public class Game extends JPanel implements KeyListener{
 				new Dimension(5), new Dimension(6), new Dimension(7), new Dimension(8)};
 		player = new Player(205, 650, 90, 150);
 		
-		atStart = true;
+		atMenu = true;
+		atStart = false;
 		inDimensions = false;
 		atEnd = false;
 		atCredit = false;
@@ -36,7 +37,7 @@ public class Game extends JPanel implements KeyListener{
 	}
 
 	public void run() {
-		while(atStart) {
+		while(atStart || atMenu) {
 			repaint();
 	  		
 	  		try {
@@ -90,6 +91,10 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
+	    if(atMenu) {
+	    	g.drawImage(new ImageIcon("Menu.png").getImage(), 0, 0, 1600, 900, this);
+	    }
+	    
 	    if(atStart)  {
 	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
 	    	g.drawImage(new ImageIcon("Witch Right.png").getImage(), 324, 372, 90, 150, this);
@@ -130,8 +135,11 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = true;
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-			
-	  		if(atStart) {
+			if(atMenu) {
+				atMenu = false;
+				atStart = true;
+			}
+			else if(atStart) {
 	  			if(currentText != 12)
 	  				currentText++;
 	  			else {
