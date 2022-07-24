@@ -68,7 +68,7 @@ public class Dimension {
 			orbx = 1300;
 			orby = 200;
 			platforms = new Platform[] {new Platform(1200, 800, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(500, 800, 150, 50, true), new Platform(650, 800, 150, 50, true), new Platform(800, 800, 150, 50, true),
+					new Platform(488, 800, 150, 50, true), new Platform(725, 800, 150, 50, true), new Platform(963, 800, 150, 50, true),
 					new Platform(300, 550, 200, 50, true), new Platform(600, 400, 200, 50, true), new Platform(900, 250, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
