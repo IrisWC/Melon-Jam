@@ -17,7 +17,7 @@ public class Game extends JPanel implements KeyListener{
 	private Dimension[] dimensions;
 	private int currentDimension, currentText;
 	
-	private boolean atStart, inDimensions, atEnd;
+	private boolean atStart, inDimensions, atEnd, atCredit;
 	private boolean leftPressed, rightPressed, upPressed;
 	
 	public Game() {
@@ -28,6 +28,7 @@ public class Game extends JPanel implements KeyListener{
 		
 		inDimensions = true;
 		atEnd = false;
+		atCredit = false;
 		
 		currentDimension = 0;
 		currentText = 0;
@@ -54,7 +55,7 @@ public class Game extends JPanel implements KeyListener{
 			}
 		}
 		
-		while(atEnd) {
+		while(atEnd || atCredit) {
 			repaint();
 	  		
 	  		try {
@@ -91,6 +92,10 @@ public class Game extends JPanel implements KeyListener{
 	    if(atEnd) {
 	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
 	    	g.drawImage(new ImageIcon("End " + currentText + ".png").getImage(), 75, 625, 1450, 200, this);
+	    }
+	    
+	    if(atCredit) {
+	    	g.drawImage(new ImageIcon("Credits.png").getImage(), 0, 0, 1600, 900, this);
 	    }
 	    
 	    g2.setTransform(at);
@@ -132,6 +137,7 @@ public class Game extends JPanel implements KeyListener{
 					currentText = 3;
 					break;
 				case 3:
+					toggleEnd();
 					break;
 				case 4:
 					if(player.countShrooms() == 7)
@@ -146,6 +152,7 @@ public class Game extends JPanel implements KeyListener{
 					currentText = 7;
 					break;
 				case 7:
+					toggleEnd();
 					break;
 				}
 			}
@@ -178,21 +185,26 @@ public class Game extends JPanel implements KeyListener{
 		ImageIcon potion;
 		
 		if(shroomCount == 0)
-			potion = new ImageIcon("Pink Potion");
+			potion = new ImageIcon("Pink Potion.png");
 		else if (shroomCount >= 1 && shroomCount <= 3)
-			potion = new ImageIcon("Restoration Potion");
+			potion = new ImageIcon("Restoration Potion.png");
 		else if (shroomCount == 4)
-			potion = new ImageIcon("Language Potion");
+			potion = new ImageIcon("Language Potion.png");
 		else if (shroomCount == 7)
-			potion = new ImageIcon("Death Potion");
+			potion = new ImageIcon("Death Potion.png");
 		else if (shroomCount == 8)
-			potion = new ImageIcon("Clairvoyance Potion");
+			potion = new ImageIcon("Clairvoyance Potion.png");
 		else
-			potion = new ImageIcon("Love Potion");
+			potion = new ImageIcon("Love Potion.png");
 		
 		JLabel picLabel = new JLabel(potion);
+		picLabel.setSize(800, 800);
+		picLabel.setLocation(0, 0);
 		result.add(picLabel);
 		
 		result.setVisible(true);
+		
+		atEnd = false;
+		atCredit = true;
 	}
 }
