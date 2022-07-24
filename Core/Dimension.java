@@ -36,7 +36,7 @@ public class Dimension {
 					new Platform(567, 667, 200, 50, true), new Platform(883, 533, 200, 50, true), new Platform(567, 350, 200, 50, true)};
 			spawnx = 205;
 			spawny = 650;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(2, 1325, 350, 50, 50, true);
 			break;
 		case 3: //Green
 			background = new ImageIcon("img\\Green.png").getImage();
@@ -48,7 +48,7 @@ public class Dimension {
 					new Platform(650, 800, 200, 50, true), new Platform(1100, 800, 200, 50, true)};
 			spawnx = 155;
 			spawny = 300;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(3, 1175, 750, 50, 50, true);
 			break;
 		case 4: //Blue
 			background = new ImageIcon("img\\Blue.png").getImage();
@@ -60,7 +60,7 @@ public class Dimension {
 					new Platform(100, 800, 200, 50, true), new Platform(550, 800, 200, 50, true), new Platform(850, 700, 200, 50, true)};
 			spawnx = 205;
 			spawny = 150;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(4, 175, 750, 50, 50, true);
 			break;
 		case 5: //Purple
 			background = new ImageIcon("img\\Purple.png").getImage();
@@ -71,7 +71,7 @@ public class Dimension {
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(5, 763, 500, 50, 50, true);
 			break;
 		case 6: //Pink
 			background = new ImageIcon("img\\Pink.png").getImage();
@@ -82,7 +82,7 @@ public class Dimension {
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(6, 763, 500, 50, 50, true);
 			break;
 		case 7: //Gray
 			background = new ImageIcon("img\\Gray.png").getImage();
@@ -93,7 +93,7 @@ public class Dimension {
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(7, 763, 500, 50, 50, true);
 			break;
 		case 8: //Brown
 			background = new ImageIcon("img\\Brown.png").getImage();
@@ -104,7 +104,7 @@ public class Dimension {
 					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
 			spawnx = 175;
 			spawny = 650;
-			shroom = new Mushroom(1, 763, 500, 50, 50, true);
+			shroom = new Mushroom(8, 763, 500, 50, 50, true);
 			break;
 		}
 	}

@@ -105,6 +105,8 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			if (inDimensions) {
 				boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
+				player.checkShroom(dimensions[currentDimension].getShroom());
+				
 				if (gotOrb && currentDimension != 7) {
 					currentDimension++;
 					player.moveTo(dimensions[currentDimension].getSpawnX(), dimensions[currentDimension].getSpawnY());
@@ -112,7 +114,7 @@ public class Game extends JPanel implements KeyListener{
 				} else if (gotOrb) {
 					inDimensions = false;
 					atEnd = true;
-				}
+				} 
 			}
 			else if (atEnd) {
 				

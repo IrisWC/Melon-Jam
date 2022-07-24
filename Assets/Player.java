@@ -28,6 +28,8 @@ public class Player {
 		yvel = 0;
 		onSurface = false;
 		facingRight = true;
+		
+		bag = new ArrayList<Mushroom>();
 	}
 	
 	public void act(Platform[] platforms) {
@@ -105,11 +107,11 @@ public class Player {
 		return false;
 	}
 	
-	public boolean checkShroom(Mushroom shroom) {
+	public void checkShroom(Mushroom shroom) {
 		if(hitbox.intersects(shroom.getHitbox())) {
-			return true;
+			shroom.toggleVisibility();
+			bag.add(shroom);
 		}
-		return false;
 	}
 	
 	public void draw(Graphics g, ImageObserver obs) {
