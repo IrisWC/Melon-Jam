@@ -16,7 +16,7 @@ public class Platform {
 	private Rectangle hitbox;
 	
 	public Platform(int xcord, int ycord, int w, int h, boolean visibility) {
-		image = new ImageIcon("img\\Platform.png").getImage();
+		image = new ImageIcon("Platform.png").getImage();
 		x = xcord;
 		y = ycord;
 		width = w;

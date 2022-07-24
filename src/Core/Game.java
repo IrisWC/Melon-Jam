@@ -88,7 +88,7 @@ public class Game extends JPanel implements KeyListener{
 	    }
 	    
 	    if(atEnd)
-	    	g.drawImage(new ImageIcon("img\\Home.png").getImage(), 0, 0, 1600, 900, this);
+	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
 	    
 	    g2.setTransform(at);
 	}

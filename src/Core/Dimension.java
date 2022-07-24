@@ -17,8 +17,8 @@ public class Dimension {
 	public Dimension(int type) {
 		switch (type) {
 		case 1: //Red
-			background = new ImageIcon("img\\Red.png").getImage();
-			orb = new ImageIcon("img\\Red Orb.png").getImage();
+			background = new ImageIcon("Red.png").getImage();
+			orb = new ImageIcon("Red Orb.png").getImage();
 			orbx = 1300;
 			orby = 200;
 			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
@@ -28,8 +28,8 @@ public class Dimension {
 			shroom = new Mushroom(1, 763, 500, 50, 50, true);
 			break;
 		case 2: // Orange
-			background = new ImageIcon("img\\Orange.png").getImage();
-			orb = new ImageIcon("img\\Orange Orb.png").getImage();
+			background = new ImageIcon("Orange.png").getImage();
+			orb = new ImageIcon("Orange Orb.png").getImage();
 			orbx = 225;
 			orby = 100;
 			platforms = new Platform[] {new Platform(100, 800, 300, 50, true), new Platform(100, 200, 300, 50, true), new Platform(1200, 400, 300, 50, true),
@@ -39,8 +39,8 @@ public class Dimension {
 			shroom = new Mushroom(2, 1325, 350, 50, 50, true);
 			break;
 		case 3: //Green
-			background = new ImageIcon("img\\Green.png").getImage();
-			orb = new ImageIcon("img\\Green Orb.png").getImage();
+			background = new ImageIcon("Green.png").getImage();
+			orb = new ImageIcon("Green Orb.png").getImage();
 			orbx = 1300;
 			orby = 100;
 			platforms = new Platform[] {new Platform(1175, 200, 300, 50, true), new Platform(100, 450, 200, 50, true),
@@ -51,8 +51,8 @@ public class Dimension {
 			shroom = new Mushroom(3, 1175, 750, 50, 50, true);
 			break;
 		case 4: //Blue
-			background = new ImageIcon("img\\Blue.png").getImage();
-			orb = new ImageIcon("img\\Blue Orb.png").getImage();
+			background = new ImageIcon("Blue.png").getImage();
+			orb = new ImageIcon("Blue Orb.png").getImage();
 			orbx = 1375;
 			orby = 150;
 			platforms = new Platform[] {new Platform(1250, 250, 300, 50, true), new Platform(100, 300, 300, 50, true),
@@ -63,8 +63,8 @@ public class Dimension {
 			shroom = new Mushroom(4, 175, 750, 50, 50, true);
 			break;
 		case 5: //Purple
-			background = new ImageIcon("img\\Purple.png").getImage();
-			orb = new ImageIcon("img\\Purple Orb.png").getImage();
+			background = new ImageIcon("Purple.png").getImage();
+			orb = new ImageIcon("Purple Orb.png").getImage();
 			orbx = 1325;
 			orby = 700;
 			platforms = new Platform[] {new Platform(1200, 800, 300, 50, true), new Platform(100, 800, 300, 50, true),
@@ -75,8 +75,8 @@ public class Dimension {
 			shroom = new Mushroom(5, 1075, 250, 50, 50, true);
 			break;
 		case 6: //Pink
-			background = new ImageIcon("img\\Pink.png").getImage();
-			orb = new ImageIcon("img\\Pink Orb.png").getImage();
+			background = new ImageIcon("Pink.png").getImage();
+			orb = new ImageIcon("Pink Orb.png").getImage();
 			orbx = 225;
 			orby = 150;
 			platforms = new Platform[] {new Platform(1200, 800, 300, 50, true), new Platform(100, 250, 300, 50, true),
@@ -87,8 +87,8 @@ public class Dimension {
 			shroom = new Mushroom(6, 250, 750, 50, 50, true);
 			break;
 		case 7: //Gray
-			background = new ImageIcon("img\\Gray.png").getImage();
-			orb = new ImageIcon("img\\Gray Orb.png").getImage();
+			background = new ImageIcon("Gray.png").getImage();
+			orb = new ImageIcon("Gray Orb.png").getImage();
 			orbx = 1375;
 			orby = 200;
 			platforms = new Platform[] {new Platform(700, 800, 200, 50, true), new Platform(1300, 300, 200, 50, true),
@@ -99,8 +99,8 @@ public class Dimension {
 			shroom = new Mushroom(7, 175, 250, 50, 50, true);
 			break;
 		case 8: //Brown
-			background = new ImageIcon("img\\Brown.png").getImage();
-			orb = new ImageIcon("img\\Brown Orb.png").getImage();
+			background = new ImageIcon("Brown.png").getImage();
+			orb = new ImageIcon("Brown Orb.png").getImage();
 			orbx = 1275;
 			orby = 700;
 			platforms = new Platform[] {new Platform(100, 400, 300, 50, true), new Platform(1200, 800, 200, 50, true),

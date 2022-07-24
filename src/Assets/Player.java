@@ -17,7 +17,7 @@ public class Player {
 	private Rectangle hitbox;
 	
 	public Player(int xcord, int ycord, int w, int h) {
-		image = new ImageIcon("img\\Witch Right.png").getImage();
+		image = new ImageIcon("Witch Right.png").getImage();
 		x = xcord;
 		y = ycord;
 		width = w;
@@ -94,11 +94,11 @@ public class Player {
 	}
 	
 	public void faceRight() {
-		image = new ImageIcon("img\\Witch Right.png").getImage();
+		image = new ImageIcon("Witch Right.png").getImage();
 	}
 	
 	public void faceLeft() {
-		image = new ImageIcon("img\\Witch Left.png").getImage();
+		image = new ImageIcon("Witch Left.png").getImage();
 	}
 	
 	public boolean checkForOrb(Rectangle orbHitbox) {

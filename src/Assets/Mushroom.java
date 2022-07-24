@@ -28,28 +28,28 @@ public class Mushroom {
 		
 		switch(type) {
 		case 1:
-			image = new ImageIcon("img\\Red Shroom.png").getImage();
+			image = new ImageIcon("Red Shroom.png").getImage();
 			break;
 		case 2:
-			image = new ImageIcon("img\\Orange Shroom.png").getImage();
+			image = new ImageIcon("Orange Shroom.png").getImage();
 			break;
 		case 3:
-			image = new ImageIcon("img\\Green Shroom.png").getImage();
+			image = new ImageIcon("Green Shroom.png").getImage();
 			break;
 		case 4:
-			image = new ImageIcon("img\\Blue Shroom.png").getImage();
+			image = new ImageIcon("Blue Shroom.png").getImage();
 			break;
 		case 5:
-			image = new ImageIcon("img\\Purple Shroom.png").getImage();
+			image = new ImageIcon("Purple Shroom.png").getImage();
 			break;
 		case 6:
-			image = new ImageIcon("img\\Pink Shroom.png").getImage();
+			image = new ImageIcon("Pink Shroom.png").getImage();
 			break;
 		case 7:
-			image = new ImageIcon("img\\Gray Shroom.png").getImage();
+			image = new ImageIcon("Gray Shroom.png").getImage();
 			break;
 		case 8:
-			image = new ImageIcon("img\\Brown Shroom.png").getImage();
+			image = new ImageIcon("Brown Shroom.png").getImage();
 			break;
 		}
 	}
