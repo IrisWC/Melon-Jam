@@ -165,4 +165,34 @@ public class Game extends JPanel implements KeyListener{
 	public void keyTyped(KeyEvent e) {
 
 	}
+	
+	private void toggleEnd() {
+		int shroomCount = player.countShrooms();
+		
+		JFrame result = new JFrame();
+		result.setSize(800, 800);
+		result.setLocation(0, 0);
+		result.setLocationRelativeTo(null);
+		result.setResizable(false);
+		
+		ImageIcon potion;
+		
+		if(shroomCount == 0)
+			potion = new ImageIcon("Pink Potion");
+		else if (shroomCount >= 1 && shroomCount <= 3)
+			potion = new ImageIcon("Restoration Potion");
+		else if (shroomCount == 4)
+			potion = new ImageIcon("Language Potion");
+		else if (shroomCount == 7)
+			potion = new ImageIcon("Death Potion");
+		else if (shroomCount == 8)
+			potion = new ImageIcon("Clairvoyance Potion");
+		else
+			potion = new ImageIcon("Love Potion");
+		
+		JLabel picLabel = new JLabel(potion);
+		result.add(picLabel);
+		
+		result.setVisible(true);
+	}
 }
