@@ -103,15 +103,24 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_UP) {
 	  		upPressed = true;
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-	  		boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
-	  		if(gotOrb && currentDimension != 7) {
-	  			currentDimension++;
-	  			player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
-	  			player.stop();
-	  		} else if (gotOrb) {
-	  			inDimensions = false;
-	  			atEnd = true;
-	  		}
+			if (inDimensions) {
+				boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
+				if (gotOrb && currentDimension != 7) {
+					currentDimension++;
+					player.moveTo(dimensions[currentDimension].getSpawnX(), dimensions[currentDimension].getSpawnY());
+					player.stop();
+				} else if (gotOrb) {
+					inDimensions = false;
+					atEnd = true;
+				}
+			}
+			else if (atEnd) {
+				
+			}
+	  	} else if (e.getKeyChar() == 'y' || e.getKeyChar() == 'Y') {
+	  		
+	  	} else if (e.getKeyChar() == 'n' || e.getKeyChar() == 'N') {
+	  		
 	  	}
 	  }
 	    
