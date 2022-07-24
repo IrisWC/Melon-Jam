@@ -26,15 +26,26 @@ public class Game extends JPanel implements KeyListener{
 				new Dimension(5), new Dimension(6), new Dimension(7), new Dimension(8)};
 		player = new Player(205, 650, 90, 150);
 		
-		inDimensions = true;
+		atStart = true;
+		inDimensions = false;
 		atEnd = false;
 		atCredit = false;
 		
 		currentDimension = 0;
-		currentText = 0;
+		currentText = 1;
 	}
 
 	public void run() {
+		while(atStart) {
+			repaint();
+	  		
+	  		try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		while(inDimensions) {
 			if (leftPressed) {
 	  			player.move(-1);
@@ -79,14 +90,20 @@ public class Game extends JPanel implements KeyListener{
 	    AffineTransform at = g2.getTransform();
 	    g2.scale(ratioX,ratioY);
 	    
-	    if(inDimensions)  {
-	    	dimensions[currentDimension].draw(g, this);
-	    	player.draw(g, this);
+	    if(atStart)  {
+	    	g.drawImage(new ImageIcon("Home.png").getImage(), 0, 0, 1600, 900, this);
+	    	g.drawImage(new ImageIcon("Start " + currentText + ".png").getImage(), 75, 625, 1450, 200, this);
 	    }
 	    
-	    if(player.checkRespawn()) {
-	    	player.moveTo(dimensions[currentDimension].getSpawnX(),  dimensions[currentDimension].getSpawnY());
-  			player.stop();
+	    
+	    if(inDimensions)  {
+	    	dimensions[currentDimension].draw(g, this);
+			player.draw(g, this);
+
+			if (player.checkRespawn()) {
+				player.moveTo(dimensions[currentDimension].getSpawnX(), dimensions[currentDimension].getSpawnY());
+				player.stop();
+			}
 	    }
 	    
 	    if(atEnd) {
@@ -113,7 +130,12 @@ public class Game extends JPanel implements KeyListener{
 	  	} else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			
 	  		if(atStart) {
-	  			currentText++;
+	  			if(currentText != 11)
+	  				currentText++;
+	  			else {
+	  				inDimensions = true;
+	  				atStart = false;
+	  			}
 	  		}
 	  		else if (inDimensions) {
 				boolean gotOrb = player.checkForOrb(dimensions[currentDimension].getOrbHitbox());
