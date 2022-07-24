@@ -101,13 +101,14 @@ public class Dimension {
 		case 8: //Brown
 			background = new ImageIcon("img\\Brown.png").getImage();
 			orb = new ImageIcon("img\\Brown Orb.png").getImage();
-			orbx = 1300;
-			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
-			spawny = 650;
-			shroom = new Mushroom(8, 763, 500, 50, 50, true);
+			orbx = 1275;
+			orby = 700;
+			platforms = new Platform[] {new Platform(100, 400, 300, 50, true), new Platform(1200, 800, 200, 50, true),
+					new Platform(1200, 200, 200, 50, true), new Platform(500, 300, 150, 50, true), new Platform(883, 250, 150, 50, true),
+					new Platform(467, 600, 150, 50, true), new Platform(883, 750, 150, 50, true)};
+			spawnx = 200;
+			spawny = 250;
+			shroom = new Mushroom(8, 1275, 150, 50, 50, true);
 			break;
 		}
 	}
