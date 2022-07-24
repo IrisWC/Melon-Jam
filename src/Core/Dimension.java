@@ -89,13 +89,14 @@ public class Dimension {
 		case 7: //Gray
 			background = new ImageIcon("img\\Gray.png").getImage();
 			orb = new ImageIcon("img\\Gray Orb.png").getImage();
-			orbx = 1300;
+			orbx = 1375;
 			orby = 200;
-			platforms = new Platform[] {new Platform(1175, 300, 300, 50, true), new Platform(100, 800, 300, 50, true),
-					new Platform(444, 675, 200, 50, true), new Platform(688, 550, 200, 50, true), new Platform(931, 425, 200, 50, true)};
-			spawnx = 175;
+			platforms = new Platform[] {new Platform(700, 800, 200, 50, true), new Platform(1300, 300, 200, 50, true),
+					new Platform(100, 300, 200, 50, true), new Platform(333, 467, 150, 50, true), new Platform(517, 633, 150, 50, true), 
+					new Platform(933, 633, 150, 50, true), new Platform(1117, 467, 150, 50, true)};
+			spawnx = 750;
 			spawny = 650;
-			shroom = new Mushroom(7, 763, 500, 50, 50, true);
+			shroom = new Mushroom(7, 175, 250, 50, 50, true);
 			break;
 		case 8: //Brown
 			background = new ImageIcon("img\\Brown.png").getImage();
